@@ -13,17 +13,38 @@ Widget card(context, int index) {
     child: Container(
         height: MediaQuery.of(context).size.height * 0.18,
         decoration: BoxDecoration(
-            color: Colors.blue,
+            color: planList[index],
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(5),
                 bottomLeft: Radius.circular(5),
                 bottomRight: Radius.circular(5))),
-        child: Row(
+        child: Stack(
           children: [
-            Column(
-              children: [Text(cardList[index][0]), Text(cardList[index][1])],
+            Positioned(
+                bottom: 38,
+                left: 10,
+                child: Text(cardList[index][0],
+                    style:
+                        TextStyle(fontSize: 19, fontWeight: FontWeight.w400))),
+            Positioned(
+              bottom: 8,
+              left: 10,
+              child: Text(cardList[index][1],
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800)),
             ),
-            Icon(Icons.accessibility)
+            Positioned(
+                right: 1,
+                top: 1,
+                child: Container(
+                    height: 68,
+                    width: 85,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        color: Colors.black12,
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.elliptical(50, 50))),
+                    child:
+                        Icon(planIcon[index], color: Colors.white, size: 60)))
           ],
         )),
   );
@@ -58,7 +79,6 @@ Widget bottomNavBar(context) {
             Icons.library_books,
             color: Colors.black54,
           ),
-     
           title: Text('Task',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800))),
       BottomNavigationBarItem(
@@ -66,28 +86,25 @@ Widget bottomNavBar(context) {
             Icons.chat_bubble,
             color: Colors.black54,
           ),
-         
           title: Text('Chat',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800))),
-              BottomNavigationBarItem(
+      BottomNavigationBarItem(
           icon: Icon(
             Icons.directions_run,
             color: Colors.black54,
           ),
-   
           title: Text('Workout',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800))),
-              BottomNavigationBarItem(
+      BottomNavigationBarItem(
           icon: Icon(
             Icons.more_vert,
             color: Colors.black54,
           ),
-        
           title: Text('More',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800))),
     ],
     unselectedLabelStyle: TextStyle(color: Colors.grey),
-    selectedItemColor: Colors.black ,
+    selectedItemColor: Colors.black,
   );
 }
 
@@ -114,5 +131,5 @@ Widget bottomText(BuildContext context) {
                 textAlign: TextAlign.center,
               ),
             ))),
-          );
+  );
 }

@@ -141,6 +141,58 @@ class Second extends StatelessWidget {
                     );
                   }),
             ),
+            Divider(thickness: 20, color: Colors.grey[300]),
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(secondRow[index][0],
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 22)),
+                  FlatButton(
+                    child: Text("View All",
+                        style: TextStyle(
+                            color: Colors.yellow[800],
+                            fontWeight: FontWeight.normal,
+                            fontSize: 22)),
+                    onPressed: () {
+                      print("view all");
+                    },
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: height * 0.25,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: secondRow[index].length - 1,
+                  itemBuilder: (context, i) {
+                    return Container(
+                      width: width * 0.35,
+                      height: height * 0.3,
+                      // width * 0.2,
+                      margin: EdgeInsets.only(left: 15),
+                      child: Column(
+                        children: <Widget>[
+                          CircleAvatar(
+                              radius: 65,
+                              backgroundImage: AssetImage("assets/banner.jpg")),
+                          Text(secondRow[index][i + 1],
+                              maxLines: 2,
+                              softWrap: true,
+                              style: TextStyle(
+                                  color: Colors.black54,
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 18)),
+                        ],
+                      ),
+                    );
+                  }),
+            ),
           ]),
         ));
   }

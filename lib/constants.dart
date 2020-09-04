@@ -21,3 +21,15 @@ const List<List<String>> secondRow = [
 const String imageBelow =
     "Every craving is an indicator of smething! Tap to know what it means when you crave sicy foods";
 const Color reminder = Color.fromRGBO(173, 240, 209, 1);
+const List<Color> planList = [
+  Color.fromRGBO(70, 199, 255, 1),
+  Color.fromRGBO(235, 194, 176, 1),
+  Color.fromRGBO(58, 204, 155, 1),
+  Color.fromRGBO(254, 193, 7, 1),
+];
+const List<IconData> planIcon = [
+  Icons.pie_chart_outlined,
+  Icons.table_chart,
+  Icons.av_timer,
+  Icons.whatshot
+];

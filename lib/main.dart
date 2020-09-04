@@ -99,8 +99,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 // height: MediaQuery.of(context).size.height*0.37,
                 margin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey[400]),
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color.fromRGBO(226, 226, 226, 1),
+                ),
                 child: Column(
                   children: [
                     Padding(
@@ -136,12 +137,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text(imageBelow, softWrap: true,
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.normal,
-                              )
-                      ),
+                      child: Text(imageBelow,
+                          softWrap: true,
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.normal,
+                          )),
                     ),
                   ],
                 )),
@@ -158,21 +159,18 @@ class _MyHomePageState extends State<MyHomePage> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(18.0),
-                              child: Text("Reminders", softWrap: true,
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.normal,
-                              )
-
-                              ),
+                              child: Text("Reminders",
+                                  softWrap: true,
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.normal,
+                                  )),
                             ),
                             Expanded(
-                                                          child: Padding(
-                                padding: const EdgeInsets.only(right:5),
-                                child: Divider(
-                                  thickness: 2,
-                                  color:Colors.black
-                                ),
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 5),
+                                child:
+                                    Divider(thickness: 2, color: Colors.black),
                               ),
                             )
                           ],
@@ -180,37 +178,34 @@ class _MyHomePageState extends State<MyHomePage> {
                         Row(
                           children: [
                             CircleAvatar(
-                              backgroundColor: Colors.yellow,
-                              child: Icon(Icons.free_breakfast)),
+                                backgroundColor: Colors.yellow,
+                                child: Icon(Icons.free_breakfast)),
                             Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("May 12,2020"
-                                  ,
-                                  
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                              )),
-                                  Text("Lunch", softWrap: true,
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.normal,
-                              )
-                                  ),
+                                  Text("May 12,2020",
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.normal,
+                                      )),
+                                  Text("Lunch",
+                                      softWrap: true,
+                                      style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.normal,
+                                      )),
                                 ],
                               ),
                             ),
                             Spacer(),
                             Text("12:30 PM",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.normal,
-                              )
-                            ),
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.normal,
+                                )),
                             Switch(
                                 value: isSwitched,
                                 onChanged: (value) {
@@ -220,7 +215,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   });
                                 },
                                 activeColor: Colors.blue),
-                                SizedBox(width:5)
+                            SizedBox(width: 5)
                           ],
                         )
                       ],
